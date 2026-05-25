@@ -5,72 +5,116 @@
 <title>超五 CHAO WU</title>
 
 <style>
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
 body {
-    height:100vh;
-    background: url('sasuke.jpg') no-repeat center center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
+    margin:0;
+    font-family: Arial;
+    color:white;
+    background: url('https://wallpaperaccess.com/full/1789096.jpg') no-repeat center/cover;
 }
 
-/* efek gelap */
-.overlay {
-    position:absolute;
+/* overlay gelap */
+body::before {
+    content:"";
+    position:fixed;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,0.5);
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
 }
 
-/* efek tulisan */
-.text {
-    position:relative;
-    color:white;
-    text-align:center;
-    animation:glow 2s infinite;
-}
-
+/* animasi glow */
 @keyframes glow {
     0% { text-shadow:0 0 10px red; }
     50% { text-shadow:0 0 30px purple; }
     100% { text-shadow:0 0 10px red; }
 }
 
+.container {
+    text-align:center;
+    padding-top:80px;
+}
+
+/* nama utama */
 .title {
-    font-size:70px;
-}
-
-.subtitle {
+    font-size:60px;
     color:red;
-    letter-spacing:5px;
+    animation:glow 2s infinite;
 }
 
-/* efek zoom pelan */
-body {
-    animation:zoom 10s infinite alternate;
+/* subtitle */
+.subtitle {
+    font-size:20px;
+    color:#ccc;
+    margin-bottom:40px;
 }
 
-@keyframes zoom {
-    from { background-size:100%; }
-    to { background-size:110%; }
+/* card */
+.card {
+    width:320px;
+    margin:auto;
+    background:rgba(0,0,0,0.6);
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 20px red;
+    transition:0.3s;
 }
+
+.card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 40px purple;
+}
+
+table {
+    width:100%;
+}
+
+td {
+    padding:8px;
+}
+
+.left {
+    text-align:right;
+    color:#aaa;
+}
+
+.right {
+    text-align:left;
+}
+
+/* animasi masuk */
+.fade {
+    animation:fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(30px);}
+    to {opacity:1;}
+}
+
 </style>
 
 </head>
 
 <body>
 
-<div class="overlay"></div>
-
-<div class="text">
+<div class="container fade">
     <div class="title">超五</div>
     <div class="subtitle">CHAO WU</div>
+
+```
+<div class="card">
+    <h3>PROFILE</h3>
+
+    <table>
+        <tr><td class="left">Jumlah Unduhan</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Klaim Komisi</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Platinum</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Bakti</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Peserta Kontes</td><td class="right">: 0</td></tr>
+    </table>
+</div>
+```
+
 </div>
 
 </body>
