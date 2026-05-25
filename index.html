@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>超五 CHAO WU</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    color:white;
+    background: url('https://wallpaperaccess.com/full/2314950.jpg') no-repeat center center/cover;
+}
+
+/* overlay gelap */
+body::before {
+    content:"";
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+}
+
+/* container */
+.container {
+    position:relative;
+    text-align:center;
+    padding-top:100px;
+}
+
+/* animasi glow */
+@keyframes glow {
+    0% { text-shadow:0 0 10px red; }
+    50% { text-shadow:0 0 30px purple; }
+    100% { text-shadow:0 0 10px red; }
+}
+
+.title {
+    font-size:60px;
+    color:white;
+    animation:glow 2s infinite;
+}
+
+.subtitle {
+    color:red;
+    margin-bottom:40px;
+}
+
+/* card */
+.card {
+    width:320px;
+    margin:auto;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    box-shadow:0 0 20px red;
+}
+
+/* table */
+table {
+    width:100%;
+}
+
+td {
+    padding:8px;
+}
+
+.left {
+    text-align:right;
+    color:#ccc;
+}
+
+.right {
+    text-align:left;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="title">超五</div>
+    <div class="subtitle">CHAO WU</div>
+
+```
+<div class="card">
+    <h3>PROFILE</h3>
+    <table>
+        <tr><td class="left">Jumlah Unduhan</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Klaim Komisi</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Platinum</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Bakti</td><td class="right">: 0</td></tr>
+        <tr><td class="left">Peserta Kontes</td><td class="right">: 0</td></tr>
+    </table>
+</div>
+```
+
+</div>
+
+</body>
+</html>
